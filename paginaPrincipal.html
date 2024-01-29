@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrascômetro</title>
+    <link rel="stylesheet" href="paginaPrincipal/paginaPrincipal.css">    
+</head>
+<body>
+    <button id="toggle-dark-mode"></button>
+
+    <a href="cadastro.html" id="button-proximo">Ir para o cadastro</a>
+
+    <header id="titulo-churrasco">
+        <h1>Churrascômetro</h1>    
+    </header>
+
+    <h1>Precisa de uma ajudinha com o churrasco?</h1>
+    
+    
+    <div id="cardapio-container">
+        <div class="cardapio-geral">
+            <label for="homens">Homens</label>
+            <span id="quantidadeHomens">0</span>
+            <div class="botoes">
+                <button id="decrement-homens" onclick="decrement('quantidadeHomens')">-</button>
+                <button id="increment-homens" onclick="increment('quantidadeHomens')">+</button>
+             </div>
+           
+        </div>
+        <div class="cardapio-geral">
+            <label for="mulheres">Mulheres</label>
+            <span id="quantidadeMulheres">0</span>
+            <div class="botoes">
+            <button id="decrement-mulheres" onclick="decrement('quantidadeMulheres')">-</button>
+            <button id="increment-mulheres" onclick="increment('quantidadeMulheres')">+</button>
+            </div>
+          
+        </div >
+        <div class="cardapio-geral">
+            <label for="crianças">Crianças</label>
+            <span id="quantidadeCrianças">0</span>
+            <div class="botoes">
+                <button id="decrement-crianças" onclick="decrement('quantidadeCrianças')">-</button>
+                <button id="increment-crianças" onclick="increment('quantidadeCrianças')">+</button>
+             </div>
+
+        </div>
+        <div class="cardapio-geral">
+            <label for="bebem">Quantos adultos bebem?</label>
+            <span id="quantidadeAdultosQueBebem">0</span>
+            <div class="botoes">
+            <button id="decrement-bebem" onclick="decrement('quantidadeAdultosQueBebem')">-</button>
+            <button id="increment-bebem" onclick="increment('quantidadeAdultosQueBebem')">+</button>
+         </div>            
+        </div>
+    </div>
+    <button id="calcular-button" type="submit" onclick="calcularChurrasco()">Calcular</button>
+    <script src="paginaPrincipal/paginaPrincipal.js"></script>
+</body>
+</html>

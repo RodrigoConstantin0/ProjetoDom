@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#toggle-dark-mode {
+    background-color: #2f2f2f2f;
+    border-radius: 10px;
+    color: #c45e1a;
+    cursor: pointer;
+    margin-left: auto;
+}
+body.modo-claro #lista-container {
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px #c45e1a;    
+}
+
+body.dark-mode {
+    background-color: #413f3f;
+    color: #d1cdcd;
+}
+#titulo-churrasco {
+    color: #c45e1a;
+    text-align: center;
+    font-size: 30px;
+}
+
+p {
+    text-align: center;
+}
+
+#lista-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #413f3f;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px #c45e1a;
+    align-items: center;
+    width: 300px;
+    height: 265px;
+    margin-left: 40%;
+    margin-top: 30px;
+}
+#span {
+    color: red;
+}
+#span::after {
+    content: " convidados";
+    color:   #c57b7b;
+}
+#itemList {
+    list-style-type: none;
+}
+table {
+    border-spacing: 7px;
+}
+#button-proximo {
+    text-decoration: none;
+    margin-left: 70%;
+    border-radius: 3px;
+    box-shadow: 5px 5px 10px #c45e1a;
+    color: #020101;    
+}

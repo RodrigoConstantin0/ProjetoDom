@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CadastroChurrasco/Cadastro.css">
+    <title>Cadastro Churrascômetro</title>
+</head>
+<body>
+<button id="toggle-dark-mode"></button>
+
+<a href="paginaPrincipal.html" id="button-proximo">Ir para o menu</a>
+
+<header id="titulo-churrasco">
+    <h1>Churrascômetro</h1>    
+</header>
+
+
+<form id="cadastro-form">
+    <h2>Fique por dentro de todas as novidades, Cadastre seu e-mail e receba nossas promoções especiais sem sair de casa!</h2>
+   <label for="name"></label>
+   <input type="text" id="name" placeholder="Digite seu nome completo" required>
+
+   <label for="email"></label>
+   <input type="text" id="email" placeholder="Digite seu email" required>
+
+   <label for="cep"></label>
+   <input type="text" id="CEP" placeholder="Digite seu CEP" required>
+
+   <input type="checkbox" id="termos" name="termos" required>
+   <label for="termos">Concordo em receber comunicações e ofertas personalizadas de acordo com meus interesses</label>
+
+   <button type="submit">Cadastrar</button>
+</form>  
+
+    <script src="CadastroChurrasco/cadastro.js"></script>
+</body>
+</html>

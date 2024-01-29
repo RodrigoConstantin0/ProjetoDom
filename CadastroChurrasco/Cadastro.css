@@ -1,0 +1,83 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;   
+    padding: 0px;   
+    margin: 0px; 
+    overflow: hidden;
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+#cadastro-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px #c45e1a;   
+    align-items: center;  
+    margin-left: 25%;
+}
+#cadastro-form h2 {
+    text-align: center;   
+}
+#cadastro-form label{
+    font-weight: bold;    
+}
+#cadastro-form input[type="text"],
+#cadastro-form input[type="email"],
+#cadastro-form input[type="text"]{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;    
+    background-color: #ffffff;
+    margin-bottom: 2px;
+}
+#cadastro-form button[type="submit"]{
+    background-color: #c45e1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#cadastro-form button[type="submit"]:hover{
+    background-color: #c47642;
+}
+#titulo-churrasco {
+    color: #c45e1a;
+    text-align: center;
+    font-size: 30px;
+}
+body.dark-mode {
+    background-color: #413f3f;
+    color: #d1cdcd;
+}
+#toggle-dark-mode {
+    background-color: #2f2f2f2f;
+    border-radius: 10px;
+    color: #c45e1a;
+    cursor: pointer;
+    margin-left: auto;
+}
+#cadastro-form.dark-mode {
+    background-color: #3d3c3c;
+    color: #d1cdcd;
+}
+#cadastro-form.dark-mode input[type="text"],
+#cadastro-form.dark-mode input[type="email"],
+#cadastro-form.dark-mode input[type="text"],
+#cadastro-form.dark-mode button[type="submit"] {
+    background-color: #4f4f4f;
+}
+#cadastro-form.dark-mode button[type="submit"]:hover {
+    background-color: #c45e1a
+}
+
+#button-proximo {
+    text-decoration: none;
+    margin-left: 70%;
+    border-radius: 3px;
+    box-shadow: 5px 5px 10px #c45e1a;
+    color: #020101;    
+}
