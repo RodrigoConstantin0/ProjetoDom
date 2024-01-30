@@ -26,19 +26,38 @@ function salvarCadastro(nome, email, cep) {
     };
     localStorage.setItem('cadastro', JSON.stringify(cadastro));
 }
+
 function exibirAlerta() {
     alert('Parabéns! Cadastro efetuado com sucesso!');
 }
-document.getElementById('cadastro-form').addEventListener('submit', function (event) {
+
+function validarCEP(cep) {
+    
+    const url = `https://viacep.com.br/ws/${cep}/json/`;
+
+    return fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.erro) {
+                throw new Error('CEP inválido');
+            }
+        });
+}
+
+document.getElementById('cadastro-form').addEventListener('submit', async function (event) {
     event.preventDefault();
 
     const nome = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const cep = document.getElementById('CEP').value;
-    
-    salvarCadastro(nome, email, cep);
-  
-    exibirAlerta();
+
+    try {
+        await validarCEP(cep);
+        salvarCadastro(nome, email, cep);
+        exibirAlerta();
+    } catch (error) {
+        alert('Erro: CEP inválido');
+    }
 });
 document.addEventListener('DOMContentLoaded', function () {
     const savedTheme = TemaSalvo();
@@ -47,3 +66,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const themeButton = document.getElementById('toggle-dark-mode');
 themeButton.addEventListener('click', toggleDarkMode);
+
